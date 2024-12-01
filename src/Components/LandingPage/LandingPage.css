@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item::before {
+  content: '';
+  background: rgba(11, 11, 11, 0.6); /* Semi-transparent white overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.carousel-item img {
+  width: 100%; /* Ensure the image takes full width */
+  max-height: 750px; /* Set the desired maximum height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  margin: 0 auto; /* Center the images */
+  position: relative; /* Ensure the image is behind the overlay */
+  z-index: 0; /* Ensure the image is behind the overlay */
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 2; /* Ensure the caption is above the overlay */
+  width: 100%; /* Make sure caption takes full width for proper positioning */
+  top: 20%;
+  transform: translateY(-50%);
+  letter-spacing: 2.5px;
+}
+
+/* Unique styles for the first caption */
+.caption-first {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromTop 1.5s forwards;
+}
+
+.caption-first h3 {
+  position: absolute;
+  top: 20%;
+  left: -7%;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.caption-first p {
+  position: absolute;
+  top: 45%;
+  left: -7%;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: left;
+}
+
+.captionone {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #76a713, #b0d565); /* Adjust the colors and direction as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.btn-1 {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromBottom 1.5s forwards;
+  position: absolute;
+  /* background-color: #76a713; */
+  background: linear-gradient(135deg, #75ab08 0%, #c3e19c 99%, #78a915 100%);
+  top: 60%;
+  left: -7%;
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+/* Unique styles for the second caption */
+.caption-second {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromRight 1.5s forwards;
+}
+
+.caption-second h3 {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.caption-second p {
+  position: absolute;
+  top: 37%;
+  left: 13%;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: left;
+}
+
+.btn-2 {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromRight 1.5s forwards;
+  position: absolute;
+  background: linear-gradient(135deg, #75ab08 0%, #c3e19c 99%, #78a915 100%);
+  top: 48%;
+  left: 28%;
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+/* Unique styles for the third caption */
+.caption-third {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromLeft 1.5s forwards;
+}
+
+.caption-third h3 {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.caption-third p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: left;
+}
+
+.btn-3 {
+  opacity: 0; /* Initially hidden */
+  animation: slideInFromLeft 1.5s forwards;
+  position: absolute;
+  background: linear-gradient(135deg, #75ab08 0%, #c3e19c 99%, #78a915 100%);
+  top: 60%;
+  left: 40%;
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+/* Custom styles for carousel indicators */
+.carousel-indicators {
+  bottom: 55px; /* Adjust this value to move indicators up or down */
+  z-index: 3; /* Ensure the indicators are above the overlay */
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(73, 97, 24); /* Change the background color of the indicators */
+  border-radius: 15px;
+  width: 250px; /* Adjust the size of the indicators */
+  height: 22px;
+  position: relative; /* Ensure pseudo-element is positioned correctly */
+  display: flex; /* Flexbox to center text */
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+}
+
+.carousel-indicators .active {
+  background-color: rgba(29, 28, 28, 0.8); /* Change the background color of the active indicator */
+}
+
+/* Keyframe animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .caption-first h3, .caption-second h3, .caption-third h3 {
+    font-size: 2.5rem;
+  }
+
+  .captionone {
+    font-size: 3.5rem;
+  }
+
+  .caption-first p, .caption-second p, .caption-third p {
+    font-size: 13px;
+  }
+
+  .btn-1, .btn-2, .btn-3 {
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .caption-first h3, .caption-second h3, .caption-third h3 {
+    font-size: 2rem;
+  }
+
+  .captionone {
+    font-size: 3rem;
+  }
+
+  .caption-first p, .caption-second p, .caption-third p {
+    font-size: 12px;
+  }
+
+  .btn-1, .btn-2, .btn-3 {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .caption-first h3, .caption-second h3, .caption-third h3 {
+    font-size: 1.5rem;
+  }
+
+  .captionone {
+    font-size: 2.5rem;
+  }
+
+  .caption-first p, .caption-second p, .caption-third p {
+    font-size: 11px;
+  }
+
+  .btn-1, .btn-2, .btn-3 {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .caption-first h3, .caption-second h3, .caption-third h3 {
+    font-size: 1.25rem;
+  }
+
+  .captionone {
+    font-size: 2rem;
+  }
+
+  .caption-first p, .caption-second p, .caption-third p {
+    font-size: 10px;
+  }
+
+  .btn-1, .btn-2, .btn-3 {
+    width: 110px;
+    height: 30px;
+    font-size: 10px;
+  }
+}

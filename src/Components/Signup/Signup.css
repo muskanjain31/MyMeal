@@ -1,0 +1,64 @@
+.signup-container {
+    border: 1px solid #ccc; /* Border around the entire signup component */
+    border-radius: 20px;
+    margin: 2rem;
+    position: relative;
+  }
+
+.signup {
+    display: flex;
+  }
+  
+  .signup-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .company-photo {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(60%);
+    border-radius: 20px;
+  }
+  
+
+  .signup-right {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .signup-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .signup-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1.6rem;
+    border-radius: 13px;
+  }
+  
+  .signup-button1 {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background-color: #017d03; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,26 @@
+/* src/Cart.css */
+
+.cart {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart h2 {
+    margin-bottom: 16px;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .cart-total {
+    margin-top: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  

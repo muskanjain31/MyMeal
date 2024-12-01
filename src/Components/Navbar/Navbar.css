@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(9, 9, 9, 0.5);
+  box-shadow: none !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  z-index: 1000;
+  height: 73px;
+  
+}
+
+.navbar-brand {
+  font-size: 36px !important;
+  font-weight: 550 !important;
+  color: white !important;
+  font-family: "Bebas Neue", sans-seril !important;
+  margin-left: 23px !important;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  font-family: "Bebas Neue", sans-serif;
+
+}
+
+.brand-text {
+  color: #76A713;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 2.5rem;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #017d01;
+}
+.nav-link img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 550;
+  font-size: 24px !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:active,
+.nav-link.active {
+  color: white !important; /* Change the color here */
+} 
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 34px;
+  background-color: rgba(118, 167, 19, 0.6);
+  color: rgb(237, 15, 15) !important;
+  border-radius: 37%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.nav-link[href="#cart"]::after,
+.nav-link[href="#profile"]::after{
+  content: '';
+  position: absolute;
+  bottom: 11px;
+  left: 36%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(118, 167, 19, 0.6);
+  color: rgb(237, 15, 15) !important;
+  border-radius: 37%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.nav-link.active::after {
+  opacity: 1;
+}

@@ -1,0 +1,95 @@
+.happy-customers {
+    background-image: url('https://img.freepik.com/free-photo/top-view-table-full-delicious-food-assortment_23-2149141333.jpg?t=st=1721064440~exp=1721068040~hmac=39b2d377922543accd43259da10a5694e0ef6c9649a853d67fb6eb9992b4f56f&w=900'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    margin-top: 125px;
+  }
+  
+  .happy-customers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Adjust the opacity to make it darker or lighter */
+    z-index: 1;
+  }
+  
+  .overlay {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .counter-section {
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 46px;
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 600px) {
+    .overlay {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .counter-section {
+      margin: 20px;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  
+    h1 {
+      font-size: 18px;
+    }
+  
+    h2 {
+      font-size: 48px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    .happy-customers {
+      height: 400px; /* Adjust as needed */
+    }
+  
+    .overlay {
+      flex-direction: row;
+    }
+  
+    .counter-section {
+      margin: 20px;
+      margin-right: 94px;
+      margin-left: 94px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 50px;
+    }
+  }
+  
